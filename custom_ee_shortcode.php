@@ -18,6 +18,7 @@ function acl_ee_shortcode( $atts,$content ) {
 		'order_by'      => 'start_date',
 		'sort'          => 'ASC',
 		'show_title'    => true,
+		'image_size' => 'none',		
 	), $atts));
 
 	$category = $category_slug;
