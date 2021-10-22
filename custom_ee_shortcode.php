@@ -20,7 +20,7 @@ function acl_ee_shortcode( $atts,$content ) {
 		'show_title'    => true,
 		'image_size'	=> 'none',
 		'show_dates'	=> true,
-		'show_desc'		=> true,
+		'show_desc'		=> false,
 	), $atts));
 
 	$category = $category_slug;
@@ -104,9 +104,9 @@ global $post;
 							$single_date_format = apply_filters( 'FHEE__espresso_event_date_range__single_date_format', get_option( 'date_format' ));
 							$single_time_format = apply_filters( 'FHEE__espresso_event_date_range__single_time_format', get_option( 'time_format' ));
 							if ( $date_range == TRUE ) {
-								echo '1 '.espresso_event_date_range( $date_format, $time_format, $single_date_format, $single_time_format, $event->ID() );
+								echo espresso_event_date_range( $date_format, $time_format, $single_date_format, $single_time_format, $event->ID() );
 							}else{
-								echo '2 '.espresso_list_of_event_dates( $event->ID(), $date_format, $time_format, FALSE, NULL, TRUE, TRUE, $date_limit );
+								echo espresso_list_of_event_dates( $event->ID(), $date_format, $time_format, FALSE, NULL, TRUE, TRUE, $date_limit );
 							}
 						}
 						if ( $show_desc && $desc ) {
