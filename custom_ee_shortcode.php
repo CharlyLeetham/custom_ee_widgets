@@ -110,7 +110,7 @@ global $post;
 							}
 						}
 						if ( $show_desc && $desc ) {
-							echo '<p style="margin-top: .5em">' . $desc . ' ddddddddd</p>';
+							echo '<p style="margin-top: .5em">' . $desc . '</p>';
 						}
 						
 						echo '<p class="showmore"><a href="'.$event_url.'">Details and Registration</a></p>';
