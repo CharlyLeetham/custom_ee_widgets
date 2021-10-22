@@ -20,6 +20,7 @@ function acl_ee_shortcode( $atts,$content ) {
 		'show_title'    => true,
 		'image_size'	=> 'none',
 		'show_dates'	=> true,
+		'show_desc'		=> true,
 	), $atts));
 
 	$category = $category_slug;
