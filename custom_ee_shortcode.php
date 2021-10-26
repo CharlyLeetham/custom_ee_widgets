@@ -64,7 +64,7 @@ global $post;
 		// run the query
 		$events = EE_Registry::instance()->load_model( 'Event' )->get_all( array(
 			$where,
-			'limit' => $instance['limit'] > 0 ? '0,' . $instance['limit'] : '0,10',
+			'limit' => $limit > 0 ? '0,' . $limit : '0,10',
 			'order_by' => 'Datetime.DTT_EVT_start',
 			'order' => 'ASC',
 			'group_by' => 'EVT_ID'
@@ -112,7 +112,7 @@ global $post;
 						if ( $show_desc && $desc ) {
 							echo '<p style="margin-top: .5em">' . $desc . '</p>';
 						}
-						
+
 						echo '<p class="showmore"><a href="'.$event_url.'">Details and Registration</a></p>';
 					}
 					echo '</li>';
@@ -122,10 +122,10 @@ global $post;
 		}
 		// After widget (defined by themes).
 		echo $after_widget;
-		
+
 		$output = ob_get_contents();
 		ob_end_clean();
-		return $output;	
+		return $output;
 	}
 
 }
